@@ -16,10 +16,10 @@ class DoublyLinkedList {
  public:
   using Node_Ptr = DoubleLinkedNode<T>*;
 
-  using iterator =  /*put the type of your iterator here*/;
-  using const_iterator =  /*put the type of your const iterator here*/;
-  using reverse_iterator = /*put the type of your reverse iterator here*/;
-  using const_reverse_iterator = /*put the type of your const reverse iterator here*/;
+  using iterator = DoublyLinkedListIterator<T>*; /*put the type of your iterator here*/;
+  using const_iterator = ConstDoublyLinkedListIterator<T>*; /*put the type of your const iterator here*/;
+  using reverse_iterator = ReverseDoublyLinkedListIterator<T>*;/*put the type of your reverse iterator here*/;
+  using const_reverse_iterator = ConstReverseDoublyLinkedListIterator<T>*;/*put the type of your const reverse iterator here*/;
 
   //create a Doubly Linked List that has the same values
   //as in the vector and in the same order
@@ -58,7 +58,7 @@ class DoublyLinkedList {
   const_iterator begin() const;
   const_iterator end() const;
 
-  //return a nonconstant bidirectional iterator to the front of the list
+  //return a non constant bidirectional iterator to the front of the list
   iterator begin();
   iterator end();
 

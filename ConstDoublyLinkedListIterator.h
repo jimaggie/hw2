@@ -38,4 +38,22 @@ class ConstDoublyLinkedListIterator {
 
 };
 
+bool operator==(const ConstDoublyLinkedListIterator<T>& rhs) const {
+    if (rhs == this){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+bool operator!=(const ConstDoublyLinkedListIterator<T>& rhs)const {
+    if(rhs != this){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 #endif //TESTDOUBLELINKEDLIST_CONSTDOUBLYLINKEDLISTITERATOR_H
