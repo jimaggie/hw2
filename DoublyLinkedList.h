@@ -87,6 +87,7 @@ class DoublyLinkedList {
  private:
   Node_Ptr head;
   Node_Ptr tail;
+
   int len;
 };
 
@@ -100,6 +101,29 @@ std::ostream& operator<<(std::ostream& out, const DoublyLinkedList<T>& doublyLin
 //if a newline is encontered it should be consumed
 template<typename T>
 std::istream& operator>>(std::istream& in, DoublyLinkedList<T>& doublyLinkedList);
+
+DoublyLinkedList::DoublyLinkedList(){
+    static std::vecotr<T>* doubly_linked_list;
+  head = nullptr;
+  tail = nullptr;
+}
+
+int DoublyLinkedList::size() const {
+    return doubly_linked_list.size();
+}
+
+void DoublyLinkedList::insert(iterator &position, const T &value) {
+  DoublyLinkedList.insert(position, value);
+}
+
+bool DoublyLinkedList::empty() const {
+  return (head == nullptr) && (tail == nullptr);
+}
+
+void DoublyLinkedList::erase(iterator &position) {
+    
+}
+
 
 
 #endif //LINKEDLIST_DOUBLYLINKEDLIST_H
